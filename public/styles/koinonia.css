@@ -1,0 +1,528 @@
+
+
+
+
+.wave-containerkoi {
+    background: #000084ff;
+    background-image: url(../static/bluemovil.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+  }
+.imagencaptura{
+  height: 120px !important;
+}
+.textokoi {
+    font-size:4vh;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Open Sans",sans-serif;
+  }
+  .textokoi2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    font-family: "Open Sans",sans-serif;
+    margin-top: 20px;
+  }
+  
+  .logokoi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-90%);
+    width: 80vw;
+  
+  }
+  .logokoi img{
+   width: 100%;
+   object-fit: cover;
+   max-height: 100%;
+  }
+
+  @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+  * {
+    box-sizing: border-box;
+  }
+  *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  #containerkoi {
+    grid-area: main;
+    align-self: center;
+    justify-content: center;
+    text-align: left;
+    margin-top: 50px;
+    display: flex;
+    
+    
+  }
+
+ #containerkoi button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  #containerkoi button.learn-more {
+    width: 9rem;
+    height: 3rem;
+  }
+  #containerkoi button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 2rem;
+    height: 2rem;
+    background: #ffff;
+    border-radius: 1.625rem;
+    width: 100%;
+  }
+ #containerkoi button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgb(76, 0, 199);
+  }
+  #containerkoi button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.2rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  #containerkoi button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid  #390b6c;
+    border-right: 0.125rem solid  #390b6c;
+    transform: rotate(45deg);
+  }
+  #containerkoi button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #ffff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #textoliso{
+    color: #fa7b25 !important;
+  }
+
+  #sectionkoireserva{
+      background-color: #15035f;
+      position: relative;
+      height: 225vh;
+
+}
+  
+ 
+  .formularioCont {
+    
+  }
+
+
+
+  .headerolas {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(
+    #15035f 15%,
+    #fa7b25 100%
+    );
+    height: 225vh;
+  }
+  
+  .inner-header {
+    height: 210vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .contenido{
+    width: 95vw;
+    height: 210vh;
+    margin-top: -12vh;
+    background-color: white;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+  }
+  
+  .contenidoolas {
+    position: relative;
+    text-align: center;
+    background-color: #15035f ;
+    color: #FFF;
+  }
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    
+    .waves {
+      height: 40px;
+      min-height: 40px;
+    }
+    .content {
+      height: 30vh;
+    }
+    h1 {
+      font-size: 24px;
+    }
+  }
+  
+
+  .formg{
+      position: relative;
+      height: 95vh;
+  }
+  .formpago{
+    margin-top: 10vh;
+    position: relative;
+    height: 100vh;
+    width: 95vw;
+    text-align: center;
+    
+}
+  
+
+  .barradeprogreso{
+      width: 80%;
+      height: 100px;
+      align-items: center;
+      display: grid;
+      margin: auto;
+  }
+
+  .textokoiform {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: left;
+    font-family: "Open Sans",sans-serif;
+    margin-left: 20px;
+  }
+
+  .textokoiform4 {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    font-family: "Open Sans",sans-serif;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 5px
+  }
+  .textokoiform2{
+    font-size:20px;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Open Sans",sans-serif;
+  }
+.dropzone {
+    flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: #15035f;
+  border-style: dashed;
+  background-color: #fa7a255d;
+  color: #272727;
+  outline: none;
+  transition: 'border .24s ease-in-out';
+  width: 80%;
+  height: 40vh;
+  margin: auto;
+  text-align: center;
+}
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+  color: black;
+  background-color: white;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 48%;
+  height: 50px;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+select {
+  flex: 1;
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #ff9900;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+  height: 100%;
+}
+/* Transition */
+.select:hover::after {
+  color: #123bf3;
+}
+
+.selectdiv{
+  margin-left: 4.5%;
+}
+.verifcar{
+  display: flex;
+  justify-content: center;
+}
+.botonveri{
+display: grid;
+align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .wave-containerkoi {
+    background: #000084ff;
+    background-image: url(../static/bluebg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+  }
+  #textoliso{
+    color: #ffff !important;
+  }
+  .textokoi {
+    font-size: 50px;
+    line-height: 62px;
+    font-weight: 600;
+    text-align: left;
+    font-family: "Open Sans",sans-serif;
+  }
+  .textokoi2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: left;
+    font-family: "Open Sans",sans-serif;
+    margin-top: 60px;
+  }
+  
+  .logokoi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-80%) translateY(-60%);
+    width: 50vw;
+  
+  }
+
+  #containerkoi {
+    
+    text-align: left;
+    margin-top: 50px;
+    display: block;
+    
+    
+  }
+  #containerkoi button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  #containerkoi button.learn-more {
+    width: 12rem;
+    height: 3rem;
+  }
+  #containerkoi button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #ffff;
+    border-radius: 1.625rem;
+  }
+  #containerkoi button:hover .circle {
+    width: 100%;
+  }
+  #containerkoi button:hover .circle .icon.arrow {
+    background: #fa7b25;
+    transform: translate(1rem, 0);
+  }
+  #containerkoi button:hover .button-text {
+    color: #fa7b25 !important;
+  }
+
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+    color: black;
+    background-color: white;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: flex;
+    width: 48%;
+    height: 50px;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: 0.25em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    margin-left: 5px;
+    margin-top: 20px;
+  }
+  select {
+    flex: 1;
+    padding: 0 0.5em;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #ff9900;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: 0.25s all ease;
+    -o-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+    height: 100%;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #123bf3;
+  }
+
+  .selectdiv{
+    margin-left: 4.5%;
+  }
+  
+}

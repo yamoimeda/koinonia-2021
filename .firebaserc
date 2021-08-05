@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "minaposento"
+  },
+  "targets": {
+    "minaposento": {
+      "hosting": {
+        "admin-koinoia": [
+          "admin-kooinonia"
+        ]
+      }
+    }
+  }
+}
