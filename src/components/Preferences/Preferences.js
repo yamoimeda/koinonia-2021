@@ -42,8 +42,8 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(nombre, cedula, igle, red, monto,tipo,url,uid,verificado) {
-  return { nombre, cedula, igle, red, monto,tipo,url,uid,verificado };
+function createData(nombre, cedula, igle, red, monto,tipo,url,uid,verificado,pagosurls) {
+  return { nombre, cedula, igle, red, monto,tipo,url,uid,verificado,pagosurls };
 }
 
 const styles = (theme) => ({
@@ -100,7 +100,7 @@ export class Preferences extends React.Component {
    
     querySnapshot.forEach((doc) => {
       var d = doc.data()
-     newdata.push(createData(d.nombre +" "+d.apellido, d.cedula, d.igle, d.red, d.monto,d.tipo,d.url,d.uid,d.verificado))
+     newdata.push(createData(d.nombre +" "+d.apellido, d.cedula, d.igle, d.red, d.monto,d.tipo,d.url,d.uid,d.verificado,d.pagosurls))
      total = total + parseFloat(d.monto)
      registrados = registrados+1
       });
@@ -259,7 +259,7 @@ handleOpen=(url)=>{
                 
                 </StyledTableCell>
               <StyledTableCell align="left">{row.tipo == 1 ? 'Completo' :"Media jornada "}</StyledTableCell>
-              <StyledTableCell align="left">{row.verificado == 1 ? <Badge color="primary" badgeContent={"verificado"}/> :<Badge color="secondary" badgeContent={"pendiente"}/>}</StyledTableCell>
+              <StyledTableCell align="left">{row.verificado == 1 ? <Badge color="primary" badgeContent={"verificado"}/> : row.pagosurls.length > 1 ? <Badge color="secondary" badgeContent={"Otro pagó"}/>:<Badge color="secondary" badgeContent={"pendiente"}/>}</StyledTableCell>
               <StyledTableCell align="right">
 
                       <Button
@@ -278,7 +278,7 @@ handleOpen=(url)=>{
               </Button>
               </StyledTableCell>
               <StyledTableCell align="right">
-              <div id={row.uid} className="foto" onClick={()=>this.handleOpen(row.url)}>
+              <div id={row.uid} className="foto" onClick={()=>this.handleOpen(row.pagosurls)}>
                    
                       <img src={row.url} alt={row.url}/>
                     
@@ -296,6 +296,11 @@ handleOpen=(url)=>{
     <Dialog onClose={this.handleClose} aria-labelledby="customized-dialog-title" open={this.state.open}>
         
         <DialogContent dividers>
+
+          {
+
+            
+          }
         <div className="fotomodal">
                    
                    <img style={{height:500}} src={this.state.url} alt={this.state.url}/>

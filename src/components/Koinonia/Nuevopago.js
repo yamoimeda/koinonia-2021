@@ -85,13 +85,11 @@ export class Nuevopago extends Component {
            snapshot.ref.getDownloadURL().then(function(downloadURL) {
                 var u = "url"+today
                 var p = "monto"+today
-               registro.set({
-                  
-                  [u]:downloadURL,
-                  [p]:monto
+               registro.update({
+                pagosurls: firebase.firestore.FieldValue.arrayUnion(downloadURL)
               
               
-          }, { merge: true }).then(()=>{
+          }).then(()=>{
               alert("cargado correctamente")
             routeChange()
           }).catch((error) => {

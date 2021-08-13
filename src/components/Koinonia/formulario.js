@@ -185,8 +185,10 @@ export class UserForm extends Component {
         cedula: cedula,
         fecha: today,
         url:downloadURL,
+        pagosurls:[downloadURL],
         verificado:0,
-        monto: monto
+        monto: monto,
+        pagado:0
         
     })
     .then(() => {
